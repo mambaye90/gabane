@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./page.css">
+    <title>Contrat indépendant</title>
+</head>
+<body>
+    <h1>Facture de prestation de Service</h1>
+    <div class="container">
+        <form id="invoiceForm">
+            <section>
+                <ul>
+                    <li>
+                        <label for="rname">Nom restaurant</label>
+                        <input type="text" id="rname" name="rname" placeholder="Entrez le nom restaurant" required>
+                    </li>
+                    
+                    <li>
+                        <label for="adrpost">Adresse</label>
+                        <input type="text" id="adrpost" name="adrpost" placeholder="Entrez votre adresse" required>
+                    </li>
+                    <li>
+                        <label for="codpost">Code Postal</label>
+                        <input type="text" id="codpost" name="codpost" placeholder="Entrez votre code postal" required>
+                    </li>
+
+                    <li>
+                        <label for="tel">Numéro téléphone</label>
+                        <input type="text" id="tel" name="tel" placeholder="Entrez le numéro tel" pattern="\d{10}" title="Le numéro de telephone doit contenir 10 chiffres" required>
+                    </li>
+                    <li>
+                        <label for="quantity">le nombre d'heure</label>
+                        <input type="number" id="quantity" name="quantity" placeholder="Entrer le nombre d'heure" step="0.01">
+                    </li>
+
+                    <li>
+                        <label for="price">Prix unitaire</label>
+                        <input type="number" id="price" name="price" placeholder="Entrer le Prix unitaire" step="0.01">
+                    </li>
+                    <li>
+                        <label for="TVA"> TVA</label>
+                        <input type="number" id="TVA" name="TVA" step="0.01">
+                    </li>
+
+                    
+                   
+                </ul>
+                
+                <input type="submit" value="Telecharger la facture en pdf">
+            </section>
+        </form>
+    </div>
+    <footer>
+        <p>Développé par Ma Mbaye Diop</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+    <script src="./pdf.js"></script>
+</body>
+</html>
